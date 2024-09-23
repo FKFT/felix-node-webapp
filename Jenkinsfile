@@ -1,22 +1,9 @@
 pipeline {
-  agent any
-  tools {nodejs "node" }
+  agent
   stages {
-    stage('Cloning Git') {
+    stage ('Initialize') {
       steps {
-        git url: 'https://github.com/FKFT/felix-node-webapp',
-        credentialsId: 'FKFT'
-      }
-    }
-    stage('Build Container Image') {
-      steps {
-        agent{
-          dockerfile {
-              filename '$workspace/Dockerfile',
-              cat '$workspace/Dockerfile'              
-
-}
-        }
+        echo 'testing'
       }
     }
   }

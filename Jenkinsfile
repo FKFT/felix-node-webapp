@@ -14,19 +14,10 @@ pipeline {
           dockerfile {
               filename '$workspace/Dockerfile',
               cat '$workspace/Dockerfile'              
-          }
+
+}
         }
       }
     }
-    {
-    {
-
-       }
-    }
-{
-      {
-
-      }
-    }    
   }
 }

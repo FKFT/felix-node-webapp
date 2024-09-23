@@ -1,13 +1,11 @@
 pipeline {
   agent any
-
+  tools {nodejs "node" }
   stages {
     stage('Cloning Git') {
       steps {
-        git branch: "main",
-            url: 'https://github.com/FKFT/felix-node-webapp.git',
+        git url: 'https://github.com/FKFT/felix-node-webapp',
         credentialsId: 'FKFT'
-        sh 'cd node-express-hello-world'
       }
     }
     stage('Build Container Image') {
@@ -15,8 +13,8 @@ pipeline {
         agent{
           dockerfile {
               filename '$workspace/Dockerfile',
-              
-          
+              label 'node'              
+          }
         }
       }
     }

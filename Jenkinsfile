@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage ('Initialize') {
       steps {
-        echo 'testing'
+        filename '$workspace/Dockerfile'
+        echo 'working till here'
       }
     }
   }

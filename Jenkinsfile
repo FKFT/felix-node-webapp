@@ -13,19 +13,19 @@ pipeline {
         agent{
           dockerfile {
               filename '$workspace/Dockerfile',
-              label 'node'              
+              cat '$workspace/Dockerfile'              
           }
         }
       }
     }
-    stage('Build') {
-       steps {
-         sh 'npm install'
+    {
+    {
+
        }
     }
-    stage('Test') {
-      steps {
-        sh "npm start"
+{
+      {
+
       }
     }    
   }
